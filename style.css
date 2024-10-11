@@ -70,19 +70,22 @@ body{
     transform: translate(-50%,-50%);
 }
 
-
+.shape{
+    width: 6rem;
+}
 .handshape{
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .rock{
     border: 20px solid rgb(233, 45, 76);
     box-shadow: 0 8px #a90f2b, inset 0 8px #cad5d6;
-    position: absolute;
-    top: -130px;
-    right: -120px;
+    position: relative;
+    bottom: -80px;
+
 }
 .paper{
     border: 20px solid rgb(82, 85, 255);
@@ -94,6 +97,7 @@ body{
 .scissors{
     border: 20px solid rgb(233, 202, 45);
     box-shadow: 0 8px #a9920f, inset 0 8px #cad5d6;
-    /* position: absolute;
-    bottom: -150px;
-} */
+    position: absolute;
+    top: -130px;
+    right: -120px;
+}
