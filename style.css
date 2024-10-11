@@ -1,0 +1,63 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+}
+
+body{
+    height: 100vh;
+    background: radial-gradient(circle 125vh at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+
+.header{
+    width: 64rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 3rem ;
+    border: 3px solid hsl(217, 16%, 45%);;
+    border-radius: 10px;
+    position: absolute;
+    top: 4rem;
+}
+
+.scorecounter{
+    background-color: rgb(231, 232, 233);
+    width: 13rem;
+    height: 9rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    position: relative;
+}
+
+.score{
+    position: absolute;
+    top: 1.2rem;
+    font-size:1.4rem ;
+    font-family:Arial, Helvetica, sans-serif;
+    color: blue;
+    font-weight: 700;
+}
+
+.scorenumber{
+    position: absolute;
+    top: 3rem;
+    font-size: 4.8rem;
+    font-weight: 700;
+    color: rgb(96, 110, 133);
+}
