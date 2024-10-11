@@ -56,6 +56,44 @@ body{
     color: rgb(96, 110, 133);
 }
 
+.selectbutton{
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
 .selectingbg{
-    width: 23rem;
+    width: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.handshape{
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%;
+}
+
+.rock{
+    border: 20px solid rgb(233, 45, 76);
+    box-shadow: 0 8px #a90f2b, inset 0 8px #cad5d6;
+    position: absolute;
+    top: -130px;
+    right: -120px;
+}
+.paper{
+    border: 20px solid rgb(82, 85, 255);
+    box-shadow: 0 8px #180d92, inset 0 8px #cad5d6;
+    position: absolute;
+    top: -130px;
+    left: -120px;
+}
+.scissors{
+    border: 20px solid rgb(233, 202, 45);
+    box-shadow: 0 8px #a9920f, inset 0 8px #cad5d6;
+    /* position: absolute; */
 }
