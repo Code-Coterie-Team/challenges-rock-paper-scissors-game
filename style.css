@@ -11,14 +11,16 @@
 body{
     height: 100vh;
     background: radial-gradient(circle 125vh at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    overflow: auto;
 }
 
 .container{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+   
 }
 
 .header{
@@ -28,7 +30,7 @@ body{
     padding: 2rem 3rem ;
     border: 3px solid hsl(217, 16%, 45%);;
     border-radius: 10px;
-
+    margin-top: 3rem;
 }
 
 .scorecounter{
@@ -37,9 +39,10 @@ body{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 1.5rem;
+   
 }
 
 .score{
@@ -57,18 +60,19 @@ body{
 
 .selectbutton{
     position: relative;
-    /* display: flex;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
 }
 
-.selectingbg{
+/* .selectingbg{
     width: 30rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
+ transform: translate(-50%,-50%);
+
+} */
 
 .shape{
     width: 6rem;
@@ -83,22 +87,42 @@ body{
 .rock{
     border: 20px solid rgb(233, 45, 76);
     box-shadow: 0 8px #a90f2b, inset 0 8px #cad5d6;
-    position: relative;
-    bottom: -80px;
+    position: absolute;
+    bottom: -17px;
 
 }
 .paper{
     border: 20px solid rgb(82, 85, 255);
     box-shadow: 0 8px #180d92, inset 0 8px #cad5d6;
     position: absolute;
-    top: -130px;
-    left: -120px;
+    top: -73px;
+    left: -61px;
 }
 .scissors{
     border: 20px solid rgb(233, 202, 45);
     box-shadow: 0 8px #a9920f, inset 0 8px #cad5d6;
     position: absolute;
-    top: -130px;
-    right: -120px;
+    top: -73px;
+    right: -61px;
+}
+.btnGame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding: 0 4rem;
+    font-size: 1.5rem;
+    width: 100%;
+    margin-bottom: 3rem;
 }
 
+
+.rules,
+.mode {
+    display: inline;
+    border: 2px solid hsl(217, 16%, 45%);
+    color: white;
+    padding: 0.5rem 3rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
