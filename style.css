@@ -11,7 +11,7 @@
 body{
     height: 100vh;
     background: radial-gradient(circle 125vh at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
-    overflow: hidden;
+    overflow: auto;
 }
 
 .container{
@@ -20,7 +20,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
+    overflow: auto;
 }
 
 .header{
@@ -125,4 +125,44 @@ body{
     padding: 0.5rem 3rem;
     border-radius: 6px;
     cursor: pointer;
+}
+.modal{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 32%;
+    background-color: white;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+.rulesModal{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+     
+}
+.modal-header{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.modal-body img{
+    width: 100%;
+}
+h2{
+    font-size: 3rem;
+}
+.close{
+    font-size: 5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ced0d8;
 }
