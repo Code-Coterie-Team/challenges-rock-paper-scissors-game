@@ -9,6 +9,8 @@ let buttons = document.querySelector(".handshape ");
 
 let gameGridContainer = document.querySelector(".gameGridContainer")
 
+let resultContainer = document.querySelector(".resultOfGame");
+
 rules.addEventListener("click", () => {
     modal.style.display = "block";
     modal.style.animationName = "moveModalOpen";
@@ -25,6 +27,7 @@ close.addEventListener("click", () => {
 
 buttons.addEventListener("click" , ()=> {
     gameGridContainer.classList.add('active')
+    resultContainer.classList.add('click')
 
 })
 
