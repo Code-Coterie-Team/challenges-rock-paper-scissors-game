@@ -192,3 +192,53 @@ h2 {
         top: -20%;
     }
 }
+
+.gameGridContainer.active {
+    display: none;
+}
+
+
+.resultOfGame{
+   display: none;
+}
+
+.youPicked ,.theHousePicked{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.resultOfGame p{
+    color: #cad5d6;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.you{
+    background-color: #cad5d6;
+    width: 284px;
+    height: 284px;
+    border-radius: 50%;
+    border: 40px solid rgb(82, 85, 255);
+    box-shadow: 0 8px #180d92, inset 0 8px #cad5d6;
+
+}
+
+.computer{
+    background-color: #041331;
+    width: 284px;
+    height: 284px;
+    border-radius: 50%;
+    border: 40px solid #041331;
+}
+
+
+.resultOfGame.click{
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    gap: 120px;
+}
