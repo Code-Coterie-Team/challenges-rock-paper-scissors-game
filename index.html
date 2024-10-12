@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-scissors</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-           <img class="titel" src="images/logo.svg" alt="Rock Paper scissors">
-           <div class="scorecounter">
-            <p class="score">SCORE</p>
-            <p class="scorenumber">0</p>
-           </div>
+            <img class="titel" src="images/logo.svg" alt="Rock Paper scissors">
+            <div class="scorecounter">
+                <p class="score">SCORE</p>
+                <p class="scorenumber">0</p>
+            </div>
         </div>
-        <div class="selectbutton">
-                <img class="selectingbg" src="images/bg-triangle.svg" alt="">
-                <button class="handshape rock"><img class="shape" src="images/icon-rock.svg" alt="rock"></button>
-                <button class="handshape paper"><img class="shape" src="images/icon-paper.svg" alt="paper"></button>
-                <button class="handshape scissors"><img class="shape" src="images/icon-scissors.svg" alt="scissors"></button>
+        <div class="gameGridContainer">
+            <img class="selectingbg" src="images/bg-triangle.svg" alt="">
+            <button class="handshape rock"><img class="shape" src="images/icon-rock.svg" alt="rock"></button>
+            <button class="handshape paper"><img class="shape" src="images/icon-paper.svg" alt="paper"></button>
+            <button class="handshape scissors"><img class="shape" src="images/icon-scissors.svg"
+                    alt="scissors"></button>
+        </div>
+        <div class="footer">
+            <div class="rules">RULES</div>
+            <div class="mode">MODE</div>
+
         </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="modalRules" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content rulesModal">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>RULES</h2>
+            </div>
+            <div class="modal-body">
+                <img class="rulesModal_img" src="/images/image-rules.svg"
+                    alt="rock beats scissors, paper beats rock, scissors beats paper">
+            </div>
+        </div>
+    </div>
+
+<script src="game.js"></script>
 </body>
+
 </html>
