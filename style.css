@@ -1,20 +1,20 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-:root{
+:root {
     font-size: 10px;
 }
 
-body{
+body {
     height: 100vh;
     background: radial-gradient(circle 125vh at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     overflow: auto;
 }
 
-.container{
+.container {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -23,42 +23,43 @@ body{
     overflow: auto;
 }
 
-.header{
+.header {
     width: 48%;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 3rem ;
-    border: 3px solid hsl(217, 16%, 45%);;
+    padding: 2rem 3rem;
+    border: 3px solid hsl(217, 16%, 45%);
+    ;
     border-radius: 10px;
     margin-top: 3rem;
 }
 
-.scorecounter{
+.scorecounter {
     background-color: rgb(231, 232, 233);
-    width:22%;
+    width: 22%;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-   
+
 }
 
-.score{
-    font-size:1.4rem ;
-    font-family:Arial, Helvetica, sans-serif;
+.score {
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
     color: blue;
     font-weight: 700;
 }
 
-.scorenumber{
+.scorenumber {
     font-size: 4.8rem;
     font-weight: 700;
     color: rgb(96, 110, 133);
 }
 
-.selectbutton{
+.gameGridContainer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -74,38 +75,42 @@ body{
 
 } */
 
-.shape{
+.shape {
     width: 6rem;
 }
-.handshape{
+
+.handshape {
     width: 18rem;
     height: 18rem;
     border-radius: 50%;
     cursor: pointer;
 }
 
-.rock{
+.rock {
     border: 20px solid rgb(233, 45, 76);
     box-shadow: 0 8px #a90f2b, inset 0 8px #cad5d6;
     position: absolute;
     bottom: -17px;
 
 }
-.paper{
+
+.paper {
     border: 20px solid rgb(82, 85, 255);
     box-shadow: 0 8px #180d92, inset 0 8px #cad5d6;
     position: absolute;
     top: -73px;
     left: -61px;
 }
-.scissors{
+
+.scissors {
     border: 20px solid rgb(233, 202, 45);
     box-shadow: 0 8px #a9920f, inset 0 8px #cad5d6;
     position: absolute;
     top: -73px;
     right: -61px;
 }
-.btnGame {
+
+.footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,10 +131,13 @@ body{
     border-radius: 6px;
     cursor: pointer;
 }
-.modal{
+
+.modal {
     display: none;
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -137,42 +145,59 @@ body{
     background-color: white;
     border-radius: 2rem;
     padding: 3rem;
-   
+
 }
-.rulesModal{
-  
+
+.rulesModal {
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:3rem;
-     
+    gap: 3rem;
+
 }
-.modal-header{
+
+.modal-header {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
-.modal-body img{
+
+.modal-body img {
     width: 100%;
 }
-h2{
+
+h2 {
     font-size: 3rem;
 }
-.close{
+
+.close {
     font-size: 5rem;
     font-weight: bold;
     cursor: pointer;
     color: #ced0d8;
 
 }
-@keyframes moveModalOpen{
-    from {top: 0;}
-    to {top: 50%;}
+
+@keyframes moveModalOpen {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 50%;
+    }
 }
-@keyframes moveModalClose{
-    from {top: 50%;}
-    to {top: -20%;}
+
+@keyframes moveModalClose {
+    from {
+        top: 50%;
+    }
+
+    to {
+        top: -20;
+    }
 }
