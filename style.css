@@ -137,6 +137,7 @@ body{
     background-color: white;
     border-radius: 2rem;
     padding: 3rem;
+   
 }
 .rulesModal{
   
@@ -165,4 +166,13 @@ h2{
     font-weight: bold;
     cursor: pointer;
     color: #ced0d8;
+
+}
+@keyframes moveModalOpen{
+    from {top: 0;}
+    to {top: 50%;}
+}
+@keyframes moveModalClose{
+    from {top: 50%;}
+    to {top: -20%;}
 }
