@@ -43,7 +43,6 @@ body {
     justify-content: center;
     align-items: center;
     padding: 1.5rem;
-
 }
 
 .score {
@@ -68,12 +67,6 @@ body {
     margin-top: 11rem;
     margin-bottom: 1rem;
 }
-
-/* .selectingbg{
-    width: 30rem;
- transform: translate(-50%,-50%);
-
-} */
 
 .shape {
     width: 6rem;
@@ -135,9 +128,7 @@ body {
 .modal {
     display: none;
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -198,6 +189,6 @@ h2 {
     }
 
     to {
-        top: -20;
+        top: -20%;
     }
 }
