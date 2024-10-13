@@ -5,7 +5,7 @@ let rules = document.querySelector(".rules");
 
 let close = document.getElementsByClassName("close")[0];
 
-let buttons = document.querySelector(".handshape ");
+let buttons = document.querySelectorAll(".handshape");
 
 let gameGridContainer = document.querySelector(".gameGridContainer")
 
@@ -24,10 +24,18 @@ close.addEventListener("click", () => {
     modal.style.display = "none";
 });
 
+buttons.forEach(handShape => {
+   
+    handShape.addEventListener("click" , (e)=> {
+        console.log(handShape);
+        // console.log(e.target.alt);
+        if (handShape.classList.contains('Paper')) {
+            gameGridContainer.classList.add('active')
+            resultContainer.classList.add('click')
+        }
+       
+    
+    })
+});
 
-buttons.addEventListener("click" , ()=> {
-    gameGridContainer.classList.add('active')
-    resultContainer.classList.add('click')
-
-})
 
