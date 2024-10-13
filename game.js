@@ -7,8 +7,8 @@ let buttons = document.querySelectorAll(".handshape");
 let gameGridContainer = document.querySelector(".gameGridContainer")
 let resultContainer = document.querySelector(".resultOfGame");
 const computer = document.getElementById("computer");
-const choice = ["rock" , "paper" , "scissors"];
-const computerChoice = choice[Math.floor(Math.random() * choice.length)]; 
+const choice = ["rock", "paper", "scissors"];
+const computerChoice = choice[Math.floor(Math.random() * choice.length)];
 
 rules.addEventListener("click", () => {
     modal.style.display = "block";
@@ -24,16 +24,16 @@ close.addEventListener("click", () => {
 });
 
 buttons.forEach(handShape => {
-   
-    handShape.addEventListener("click" , (e)=> {
+
+    handShape.addEventListener("click", (e) => {
         console.log(handShape);
         // console.log(e.target.alt);
         if (handShape.classList.contains('Paper')) {
             gameGridContainer.classList.add('active')
             resultContainer.classList.add('click')
         }
-       
-    
+
+
     })
 });
 
