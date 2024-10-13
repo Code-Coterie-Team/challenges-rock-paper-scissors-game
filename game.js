@@ -31,7 +31,7 @@ buttons.addEventListener("click" , ()=> {
 function housePicked(){
     switch(computerChoice){
         case "rock":
-            computer.innerHTML = '<img src="images/icon-rock.svg" alt="rock" style="width: 60px;">'; 
+            computer.innerHTML = '<img src="images/icon-rock.svg" alt="rock" style="width:60px;">'; 
             computer.style.backgroundColor = "white";
             computer.style.border = "40px solid rgb(233, 45, 76)";
             computer.style.boxShadow = "0 10px #a90f2b, inset 0 10px #cad5d6";
@@ -39,7 +39,7 @@ function housePicked(){
             break;
 
         case "paper":
-            computer.innerHTML = '<img src="images/icon-paper.svg" alt="paper style="width: 60px;">';
+            computer.innerHTML = '<img src="images/icon-paper.svg" alt="paper style="width:60px;">';
             computer.style.backgroundColor = "white";
             computer.style.border = "40px solid rgb(82, 85, 255)";
             computer.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
@@ -48,7 +48,7 @@ function housePicked(){
             break;
 
         case "scissors":
-            computer.innerHTML = '<img src="images/icon-scissors.svg" alt="scissors style="width: 60px;">';
+            computer.innerHTML = '<img src="images/icon-scissors.svg" alt="scissors style="width:60px;">';
             computer.style.backgroundColor = "white";
             computer.style.border = " 40px solid rgb(233, 202, 45)";
             computer.style.boxShadow = " 0 10px #a9920f, inset 0 10px #cad5d6";
