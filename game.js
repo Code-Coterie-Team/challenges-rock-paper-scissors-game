@@ -1,4 +1,3 @@
-let getAltYouImg = "";
 let modal = document.getElementById("modalRules");
 let btnRules = document.querySelector(".rules");
 let btnClose = document.getElementsByClassName("close")[0];
@@ -21,6 +20,12 @@ const computerChoice = choice[Math.floor(Math.random() * choice.length)];
 
 const btnPlayAgain = document.querySelector(".playAgain");
 const resultPart = document.querySelector(".result");
+let getAlt = "";
+const announcingResult = document.querySelector(".announcingResult");
+const scoreNumber = document.querySelector(".scorenumber");
+let score = 0;
+
+
 //modalOpen
 btnRules.addEventListener("click", () => {
     modal.style.display = "block";
@@ -156,9 +161,6 @@ function removeHousePicked() {
     computer.style.boxShadow = " 0 10px #041331, inset 0 10px #041331";
     computer.classList.remove("animate");
 }
-
-// console.log(computerChoice);
-// console.log(getAlt);
 function determinTheWinner(){
 
     if (getAlt === computerChoice ){
@@ -177,7 +179,7 @@ function determinTheWinner(){
         announcingResult.innerHTML = "YOU LOSE";
     }
 }
-// determinTheWinner();
+
 
 
 
