@@ -247,6 +247,18 @@ h2 {
     width: 60px;
 }
 
+.computer.random{
+
+    background-color: white;
+}
+
+
+.computer.pink{
+   border : 40px solid rgb(233, 45, 76);
+   box-shadow:  0 10px #a90f2b, inset 0 10px #cad5d6 ;
+
+}
+
 .resultOfGame.click {
     display: flex;
     justify-content: space-between;
@@ -256,9 +268,15 @@ h2 {
 
 .showYou {
     animation-name: moveShowSelectYou;
-animation-duration: 1s;
+    animation-duration: 1s;
     
 }
+
+.computer.animate{
+    animation-name: opacity;
+    animation-duration: 2s;
+}
+
 @keyframes moveShowSelectYou {
     from {
 width: 200px;
