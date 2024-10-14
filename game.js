@@ -96,8 +96,10 @@ handshape.forEach(handShape => {
         gameGridContainer.classList.add('active');
         resultContainer.classList.add('click');
         footer.style.display = "none";
-        getAltYouImg = youImg.alt;
-        // console.log(getAltYouImg);
+        getAlt = youImg.alt;
+        // console.log(getAlt);
+        // console.log(computerChoice);
+        determinTheWinner();
     })
 });
 
@@ -154,6 +156,29 @@ function removeHousePicked() {
     computer.style.boxShadow = " 0 10px #041331, inset 0 10px #041331";
     computer.classList.remove("animate");
 }
+
+// console.log(computerChoice);
+// console.log(getAlt);
+function determinTheWinner(){
+
+    if (getAlt === computerChoice ){
+        announcingResult.innerHTML = "YOU DRAW";
+    }
+    else if(
+        (getAlt === "paper" && computerChoice === "rock") ||
+        (getAlt === "rock" && computerChoice === "scissors") ||
+        (getAlt === "scissors" && computerChoice === "paper")      
+    ){
+        announcingResult.innerHTML = "YOU WIN";
+        score++;
+        scoreNumber.innerHTML = score;
+    }
+    else{
+        announcingResult.innerHTML = "YOU LOSE";
+    }
+}
+// determinTheWinner();
+
 
 
 
