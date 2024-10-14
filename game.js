@@ -17,6 +17,7 @@ let theHousePicked = document.querySelector(".theHousePicked");
 const computer = document.getElementById("computer");
 const choice = ["rock", "paper", "scissors"];
 let computerChoice = choice[Math.floor(Math.random() * choice.length)];
+console.log(computerChoice);
 const btnPlayAgain = document.querySelector(".playAgain");
 const resultPart = document.querySelector(".result");
 let getAlt = "";
