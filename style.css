@@ -84,7 +84,6 @@ body {
     box-shadow: 0 8px #a90f2b, inset 0 8px #cad5d6;
     position: absolute;
     bottom: -17px;
-
 }
 
 .paper {
@@ -113,7 +112,6 @@ body {
     width: 100%;
     margin-bottom: 3rem;
 }
-
 
 .rules,
 .mode {
@@ -175,33 +173,11 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     color: #ced0d8;
-
-}
-
-@keyframes moveModalOpen {
-    from {
-        top: 0;
-    }
-
-    to {
-        top: 50%;
-    }
-}
-
-@keyframes moveModalClose {
-    from {
-        top: 50%;
-    }
-
-    to {
-        top: -50%;
-    }
 }
 
 .gameGridContainer.active {
     display: none;
 }
-
 
 .resultOfGame {
     display: none;
@@ -234,7 +210,6 @@ h2 {
     border-radius: 50%;
     border: 20px solid rgb(82, 85, 255);
     box-shadow: 0 10px #180d92, inset 0 10px #cad5d6;
-
 }
 
 .computer {
@@ -258,7 +233,6 @@ h2 {
 .computer.pink {
     border: 40px solid rgb(233, 45, 76);
     box-shadow: 0 10px #a90f2b, inset 0 10px #cad5d6;
-
 }
 
 .resultOfGame.click {
@@ -271,12 +245,63 @@ h2 {
 .animationshowYou {
     animation-name: moveShowSelectYou;
     animation-duration: 1s;
-
 }
 
 .computer.animate {
     animation-name: opacity;
     animation-duration: 2s;
+}
+
+.result {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.result p {
+    font-size: 5rem;
+}
+
+.animationResult {
+    animation-name: showResult;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+}
+
+.playAgain {
+    padding: 1.8rem;
+    width: 100%;
+    border-radius: 1.2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.playAgain:hover {
+    color: #dd405d;
+}
+
+@keyframes moveModalOpen {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: 50%;
+    }
+}
+
+@keyframes moveModalClose {
+    from {
+        top: 50%;
+    }
+
+    to {
+        top: -50%;
+    }
 }
 
 @keyframes moveShowSelectYou {
@@ -291,26 +316,6 @@ h2 {
     }
 }
 
-.result {
-    display: none;
-    /* display: flex; */
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-
-}
-
-.result p {
-    font-size: 5rem;
-}
-
-.animationResult {
-    animation-name: showResult;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-}
-
 @keyframes showResult {
     0% {
         opacity: 0;
@@ -323,17 +328,4 @@ h2 {
     100% {
         opacity: 1;
     }
-}
-
-.playAgain {
-    padding: 1.8rem;
-    width: 100%;
-    border-radius: 1.2rem;
-    font-weight: bold;
-    margin-top: 2rem;
-    cursor: pointer;
-}
-
-.playAgain:hover {
-    color: #dd405d;
 }

@@ -1,6 +1,6 @@
 let modal = document.getElementById("modalRules");
-let rules = document.querySelector(".rules");
-let close = document.getElementsByClassName("close")[0];
+let btnRules = document.querySelector(".rules");
+let btnClose = document.getElementsByClassName("close")[0];
 
 let handshape = document.querySelectorAll(".handshape");
 
@@ -20,28 +20,26 @@ const computerChoice = choice[Math.floor(Math.random() * choice.length)];
 const btnPlayAgain = document.querySelector(".playAgain");
 const resultPart = document.querySelector(".result");
 //modalOpen
-rules.addEventListener("click", () => {
+btnRules.addEventListener("click", () => {
     modal.style.display = "block";
     modal.style.animationName = "moveModalOpen";
     modal.style.animationDuration = "1s";
 });
 //modalClose
-close.addEventListener("click", () => {
+btnClose.addEventListener("click", () => {
 
     modal.style.animationName = "moveModalClose";
     modal.style.animationDuration = "1s";
     setTimeout(() => {
         modal.style.display = "none";
     }, 500);
- 
-   
+
+
 });
 
 handshape.forEach(handShape => {
 
     handShape.addEventListener("click", (e) => {
-        // console.log(handShape);
-        // console.log(e.target.alt);
         if (handShape.classList.contains('paper')) {
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-paper.svg";
@@ -55,7 +53,6 @@ handshape.forEach(handShape => {
             setTimeout(() => {
                 resultPart.style.display = "flex";
                 resultPart.classList.add("animationResult");
-                // resultPart.style.transition="all 4s";
             }, 2000);
 
         } else if (handShape.classList.contains('rock')) {
@@ -70,8 +67,8 @@ handshape.forEach(handShape => {
 
             setTimeout(() => {
                 resultPart.style.display = "flex";
-                 resultPart.classList.add("animationResult");
-           
+                resultPart.classList.add("animationResult");
+
             }, 2000);
         } else {
             you.classList.add("animationshowYou");
@@ -80,13 +77,13 @@ handshape.forEach(handShape => {
             you.style.boxShadow = "0 10px #a9920f, inset 0 10px #cad5d6";
             setTimeout(() => {
                 theHousePicked.style.display = "flex";
-                
+
                 housePicked();
             }, 500);
             setTimeout(() => {
                 resultPart.style.display = "flex";
-                 resultPart.classList.add("animationResult");
-          
+                resultPart.classList.add("animationResult");
+
             }, 2000);
         }
         gameGridContainer.classList.add('active');
@@ -96,10 +93,10 @@ handshape.forEach(handShape => {
     })
 });
 
-btnPlayAgain.addEventListener("click",() => {
+btnPlayAgain.addEventListener("click", () => {
     gameGridContainer.classList.remove('active');
     resultContainer.classList.remove('click');
-    footer.style.display = "flex"; 
+    footer.style.display = "flex";
     resultPart.style.display = "none";
     you.classList.remove("animationshowYou");
     resultPart.classList.remove("animationResult");
@@ -142,7 +139,7 @@ function housePicked() {
     }
 
 }
-function removeHousePicked(){
+function removeHousePicked() {
     computer.innerHTML = '<img src="" alt="">';
     computer.style.backgroundColor = "#041331";
     computer.style.border = " 40px solid #041331";
