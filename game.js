@@ -17,6 +17,9 @@ const computer = document.getElementById("computer");
 const choice = ["rock", "paper", "scissors"];
 const computerChoice = choice[Math.floor(Math.random() * choice.length)];
 
+const btnPlayAgain = document.querySelector(".playAgain");
+const resultPart = document.querySelector(".result");
+
 rules.addEventListener("click", () => {
     modal.style.display = "block";
     modal.style.animationName = "moveModalOpen";
@@ -44,6 +47,11 @@ buttons.forEach(handShape => {
                 theHousePicked.style.display = "flex";
                 housePicked();
             }, 500);
+            setTimeout(() => {
+                resultPart.style.display = "flex";
+                resultPart.classList.add("animationResult");
+                // resultPart.style.transition="all 4s";
+            }, 3000);
         } else if (handShape.classList.contains('rock')) {
             youImg.src = "images/icon-rock.svg";
             you.style.border = "40px solid rgb(233, 45, 76)";
@@ -52,14 +60,25 @@ buttons.forEach(handShape => {
                 theHousePicked.style.display = "flex";
                 housePicked();
             }, 500);
+            setTimeout(() => {
+                resultPart.style.display = "flex";
+                 resultPart.classList.add("animationResult");
+           
+            }, 3000);
         } else {
             youImg.src = "images/icon-scissors.svg";
             you.style.border = "40px solid rgb(233, 202, 45)";
             you.style.boxShadow = "0 10px #a9920f, inset 0 10px #cad5d6";
             setTimeout(() => {
                 theHousePicked.style.display = "flex";
+                
                 housePicked();
             }, 500);
+            setTimeout(() => {
+                resultPart.style.display = "flex";
+                 resultPart.classList.add("animationResult");
+          
+            }, 3000);
         }
         gameGridContainer.classList.add('active');
         resultContainer.classList.add('click');
@@ -68,7 +87,11 @@ buttons.forEach(handShape => {
     })
 });
 
-
+btnPlayAgain.addEventListener("click",() => {
+    gameGridContainer.classList.remove('active');
+    resultContainer.classList.remove('click');
+    footer.style.display = "flex"; 
+});
 function housePicked() {
     switch (computerChoice) {
         case "rock":
@@ -78,7 +101,7 @@ function housePicked() {
                 computer.style.backgroundColor = "white";
                 computer.style.border = "40px solid rgb(233, 45, 76)";
                 computer.style.boxShadow = "0 10px #a90f2b, inset 0 10px #cad5d6";
-                computer.classList.add("animate")
+                computer.classList.add("animate");
             }, 1000);
 
 
@@ -90,7 +113,7 @@ function housePicked() {
                 computer.style.backgroundColor = "white";
                 computer.style.border = "40px solid rgb(82, 85, 255)";
                 computer.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
-                computer.classList.add("animate")
+                computer.classList.add("animate");
             }, 1000);
             break;
 
@@ -100,7 +123,7 @@ function housePicked() {
                 computer.style.backgroundColor = "white";
                 computer.style.border = " 40px solid rgb(233, 202, 45)";
                 computer.style.boxShadow = " 0 10px #a9920f, inset 0 10px #cad5d6";
-                computer.classList.add("animate")
+                computer.classList.add("animate");
             }, 1000);
             break;
     }
