@@ -268,9 +268,15 @@ h2 {
 
 .showYou {
     animation-name: moveShowSelectYou;
-animation-duration: 1s;
+    animation-duration: 1s;
     
 }
+
+.computer.animate{
+    animation-name: opacity;
+    animation-duration: 2s;
+}
+
 @keyframes moveShowSelectYou {
     from {
 width: 200px;
@@ -280,4 +286,15 @@ height :200px;
 width: 286px;
 height: 286px;
     }
+}
+
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+
 }
