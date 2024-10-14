@@ -56,7 +56,7 @@ handshape.forEach(handShape => {
                 resultPart.style.display = "flex";
                 resultPart.classList.add("animationResult");
                 // resultPart.style.transition="all 4s";
-            }, 3000);
+            }, 2000);
 
         } else if (handShape.classList.contains('rock')) {
             you.classList.add("animationshowYou");
@@ -72,7 +72,7 @@ handshape.forEach(handShape => {
                 resultPart.style.display = "flex";
                  resultPart.classList.add("animationResult");
            
-            }, 3000);
+            }, 2000);
         } else {
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-scissors.svg";
@@ -87,7 +87,7 @@ handshape.forEach(handShape => {
                 resultPart.style.display = "flex";
                  resultPart.classList.add("animationResult");
           
-            }, 3000);
+            }, 2000);
         }
         gameGridContainer.classList.add('active');
         resultContainer.classList.add('click');
