@@ -32,17 +32,17 @@ function housePicked(){
     switch(computerChoice){
         case "rock":
             computer.innerHTML = '<img src="images/icon-rock.svg" alt="rock">'; 
-            // computer.style.backgroundColor = "white";
-            // computer.style.border = "40px solid rgb(233, 45, 76)";
-            // computer.style.boxShadow = "0 10px #a90f2b, inset 0 10px #cad5d6";
+            computer.style.backgroundColor = "white";
+            computer.style.border = "40px solid rgb(233, 45, 76)";
+            computer.style.boxShadow = "0 10px #a90f2b, inset 0 10px #cad5d6";
 
             break;
 
         case "paper":
             computer.innerHTML = '<img src="images/icon-paper.svg" alt="rock">'; 
-            // computer.style.backgroundColor = "white";
-            // computer.style.border = "40px solid rgb(82, 85, 255)";
-            // computer.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
+            computer.style.backgroundColor = "white";
+            computer.style.border = "40px solid rgb(82, 85, 255)";
+            computer.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
 
 
             break;
@@ -52,10 +52,9 @@ function housePicked(){
             computer.style.backgroundColor = "white";
             computer.style.border = " 40px solid rgb(233, 202, 45)";
             computer.style.boxShadow = " 0 10px #a9920f, inset 0 10px #cad5d6";
-
- 
         break;    
     }
+
 }
 
 housePicked();
