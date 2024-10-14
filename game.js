@@ -27,9 +27,14 @@ rules.addEventListener("click", () => {
 });
 //modalClose
 close.addEventListener("click", () => {
+
     modal.style.animationName = "moveModalClose";
     modal.style.animationDuration = "1s";
-    modal.style.display = "none";
+    setTimeout(() => {
+        modal.style.display = "none";
+    }, 500);
+ 
+   
 });
 
 handshape.forEach(handShape => {
