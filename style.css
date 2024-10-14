@@ -215,7 +215,9 @@ h2 {
     align-items: center;
     gap: 30px;
 }
-
+.theHousePicked{
+    display: none;
+}
 .resultOfGame p {
     color: #cad5d6;
     font-family: Arial, Helvetica, sans-serif;
@@ -225,10 +227,10 @@ h2 {
 
 .you {
     background-color: white;
-    width: 284px;
-    height: 284px;
+    width: 286px;
+    height: 286px;
     border-radius: 50%;
-    border: 40px solid rgb(82, 85, 255);
+    border: 20px solid rgb(82, 85, 255);
     box-shadow: 0 10px #180d92, inset 0 10px #cad5d6;
 
 }
@@ -241,9 +243,41 @@ h2 {
     border: 40px solid #041331;
 }
 
+.computer img {
+    width: 60px;
+}
+
+.computer.random{
+
+    background-color: white;
+}
+
+
+.computer.pink{
+   border : 40px solid rgb(233, 45, 76);
+   box-shadow:  0 10px #a90f2b, inset 0 10px #cad5d6 ;
+
+}
+
 .resultOfGame.click {
     display: flex;
     justify-content: space-between;
     padding: 5rem;
     gap: 120px;
+}
+
+.showYou {
+    animation-name: moveShowSelectYou;
+animation-duration: 1s;
+    
+}
+@keyframes moveShowSelectYou {
+    from {
+width: 200px;
+height :200px;
+    }
+    to {
+width: 286px;
+height: 286px;
+    }
 }
