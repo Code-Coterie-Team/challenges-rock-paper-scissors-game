@@ -269,3 +269,13 @@ width: 286px;
 height: 286px;
     }
 }
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+.result p{
+    font-size: 5rem;
+}
