@@ -16,9 +16,11 @@ let theHousePicked = document.querySelector(".theHousePicked");
 const computer = document.getElementById("computer");
 const choice = ["rock", "paper", "scissors"];
 const computerChoice = choice[Math.floor(Math.random() * choice.length)];
-
 const btnPlayAgain = document.querySelector(".playAgain");
 const resultPart = document.querySelector(".result");
+let score = 0;
+
+
 //modalOpen
 btnRules.addEventListener("click", () => {
     modal.style.display = "block";
@@ -43,6 +45,7 @@ handshape.forEach(handShape => {
         if (handShape.classList.contains('paper')) {
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-paper.svg";
+            youImg.alt = "paper";
             you.style.border = "40px solid rgb(82, 85, 255)";
             you.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
             setTimeout(() => {
@@ -58,6 +61,7 @@ handshape.forEach(handShape => {
         } else if (handShape.classList.contains('rock')) {
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-rock.svg";
+            youImg.alt = "rock";
             you.style.border = "40px solid rgb(233, 45, 76)";
             you.style.boxShadow = "0 10px #a90f2b, inset 0 10px #cad5d6";
             setTimeout(() => {
@@ -73,6 +77,7 @@ handshape.forEach(handShape => {
         } else {
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-scissors.svg";
+            youImg.alt = "scissors";
             you.style.border = "40px solid rgb(233, 202, 45)";
             you.style.boxShadow = "0 10px #a9920f, inset 0 10px #cad5d6";
             setTimeout(() => {
@@ -145,6 +150,12 @@ function removeHousePicked() {
     computer.style.border = " 40px solid #041331";
     computer.style.boxShadow = " 0 10px #041331, inset 0 10px #041331";
     computer.classList.remove("animate");
+}
+
+function determineTheWinner(){
+    const youchoice = youImg.alt;
+    console.log(youchoice);
+    // if()
 }
 
 
