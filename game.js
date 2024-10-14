@@ -1,3 +1,5 @@
+let getAlt = "";
+
 let modal = document.getElementById("modalRules");
 let btnRules = document.querySelector(".rules");
 let btnClose = document.getElementsByClassName("close")[0];
@@ -10,14 +12,17 @@ const you = document.querySelector(".you");
 
 const footer = document.querySelector(".footer");
 const youImg = document.querySelector(".you img");
+
 let showSelectYou = document.querySelector(".showSelectYou");
 let theHousePicked = document.querySelector(".theHousePicked");
 
 const computer = document.getElementById("computer");
 const choice = ["rock", "paper", "scissors"];
-const computerChoice = choice[Math.floor(Math.random() * choice.length)];
+let computerChoice = choice[Math.floor(Math.random() * choice.length)];
 const btnPlayAgain = document.querySelector(".playAgain");
 const resultPart = document.querySelector(".result");
+const announcingResult = document.querySelector(".announcingResult");
+const scoreNumber = document.querySelector(".scorenumber");
 let score = 0;
 
 
@@ -42,12 +47,14 @@ btnClose.addEventListener("click", () => {
 handshape.forEach(handShape => {
 
     handShape.addEventListener("click", (e) => {
+
         if (handShape.classList.contains('paper')) {
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-paper.svg";
             youImg.alt = "paper";
             you.style.border = "40px solid rgb(82, 85, 255)";
             you.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
+
             setTimeout(() => {
                 theHousePicked.style.display = "flex";
                 housePicked();
@@ -94,7 +101,8 @@ handshape.forEach(handShape => {
         gameGridContainer.classList.add('active');
         resultContainer.classList.add('click');
         footer.style.display = "none";
-
+        getAlt = youImg.alt;
+        // console.log(getAlt);
     })
 });
 
@@ -105,6 +113,7 @@ btnPlayAgain.addEventListener("click", () => {
     resultPart.style.display = "none";
     you.classList.remove("animationshowYou");
     resultPart.classList.remove("animationResult");
+    computerChoice = choice[Math.floor(Math.random() * choice.length)];
     removeHousePicked();
 });
 function housePicked() {
@@ -124,7 +133,7 @@ function housePicked() {
 
         case "paper":
             setTimeout(() => {
-                computer.innerHTML = '<img src="images/icon-paper.svg" alt="rock">';
+                computer.innerHTML = '<img src="images/icon-paper.svg" alt="paper">';
                 computer.style.backgroundColor = "white";
                 computer.style.border = "40px solid rgb(82, 85, 255)";
                 computer.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
@@ -152,11 +161,28 @@ function removeHousePicked() {
     computer.classList.remove("animate");
 }
 
-function determineTheWinner(){
-    const youchoice = youImg.alt;
-    console.log(youchoice);
-    // if()
+console.log(computerChoice);
+console.log(getAlt);
+function determinTheWinner(){
+
+    if (buttonImg === computerChoice ){
+        announcingResult.innerHTML = "YOU DRAW";
+    }
+    else if(
+        (buttonImg === "paper" && computerChoice === "rock") ||
+        (buttonImg === "rock" && computerChoice === "scissors") ||
+        (buttonImg === "scissors" && computerChoice === "paper")      
+    ){
+        announcingResult.innerHTML = "YOU WIN";
+        score++;
+        scoreNumber.innerHTML = score;
+    }
+    else{
+        announcingResult.innerHTML = "YOU LOSE";
+    }
 }
+determinTheWinner();
+
 
 
 
