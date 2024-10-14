@@ -16,7 +16,7 @@ let theHousePicked = document.querySelector(".theHousePicked");
 
 const computer = document.getElementById("computer");
 const choice = ["rock", "paper", "scissors"];
-const computerChoice = choice[Math.floor(Math.random() * choice.length)];
+let computerChoice = "";
 
 const btnPlayAgain = document.querySelector(".playAgain");
 const resultPart = document.querySelector(".result");
@@ -49,6 +49,8 @@ handshape.forEach(handShape => {
     handShape.addEventListener("click", (e) => {
 
         if (handShape.classList.contains('paper')) {
+            computerChoice = choice[Math.floor(Math.random() * choice.length)];
+            console.log(computerChoice);
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-paper.svg";
             youImg.setAttribute("alt", "paper");
@@ -66,6 +68,8 @@ handshape.forEach(handShape => {
             }, 2000);
 
         } else if (handShape.classList.contains('rock')) {
+            computerChoice = choice[Math.floor(Math.random() * choice.length)];
+            // console.log(computerChoice);
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-rock.svg";
             youImg.setAttribute("alt", "rock");
@@ -82,6 +86,8 @@ handshape.forEach(handShape => {
 
             }, 2000);
         } else {
+            computerChoice = choice[Math.floor(Math.random() * choice.length)];
+            console.log(computerChoice);
             you.classList.add("animationshowYou");
             youImg.src = "images/icon-scissors.svg";
             youImg.setAttribute("alt", "scissors");
@@ -102,8 +108,6 @@ handshape.forEach(handShape => {
         resultContainer.classList.add('click');
         footer.style.display = "none";
         getAlt = youImg.alt;
-        // console.log(getAlt);
-        // console.log(computerChoice);
         determinTheWinner();
     })
 });
@@ -172,7 +176,7 @@ function determinTheWinner(){
         (getAlt === "scissors" && computerChoice === "paper")      
     ){
         announcingResult.innerHTML = "YOU WIN";
-        score++;
+            score++;
         scoreNumber.innerHTML = score;
     }
     else{
