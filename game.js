@@ -103,6 +103,8 @@ handshape.forEach(handShape => {
         footer.style.display = "none";
         getAlt = youImg.alt;
         // console.log(getAlt);
+        // console.log(computerChoice);
+        determinTheWinner();
     })
 });
 
@@ -161,17 +163,17 @@ function removeHousePicked() {
     computer.classList.remove("animate");
 }
 
-console.log(computerChoice);
-console.log(getAlt);
+// console.log(computerChoice);
+// console.log(getAlt);
 function determinTheWinner(){
 
-    if (buttonImg === computerChoice ){
+    if (getAlt === computerChoice ){
         announcingResult.innerHTML = "YOU DRAW";
     }
     else if(
-        (buttonImg === "paper" && computerChoice === "rock") ||
-        (buttonImg === "rock" && computerChoice === "scissors") ||
-        (buttonImg === "scissors" && computerChoice === "paper")      
+        (getAlt === "paper" && computerChoice === "rock") ||
+        (getAlt === "rock" && computerChoice === "scissors") ||
+        (getAlt === "scissors" && computerChoice === "paper")      
     ){
         announcingResult.innerHTML = "YOU WIN";
         score++;
@@ -181,7 +183,7 @@ function determinTheWinner(){
         announcingResult.innerHTML = "YOU LOSE";
     }
 }
-determinTheWinner();
+// determinTheWinner();
 
 
 
