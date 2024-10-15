@@ -223,15 +223,7 @@ h2 {
     width: 60px;
 }
 
-.computer.random {
-    background-color: white;
-}
 
-
-.computer.pink {
-    border: 40px solid rgb(233, 45, 76);
-    box-shadow: 0 10px #a90f2b, inset 0 10px #cad5d6;
-}
 
 .resultOfGame.click {
     display: flex;
