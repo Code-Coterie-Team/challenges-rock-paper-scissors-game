@@ -29,9 +29,9 @@ body {
     justify-content: space-between;
     padding: 2rem 3rem;
     border: 3px solid hsl(217, 16%, 45%);
-    ;
     border-radius: 10px;
     margin-top: 3rem;
+    z-index: 10;
 }
 
 .scorecounter {
@@ -209,7 +209,6 @@ h2 {
     height: 286px;
     border-radius: 50%;
     border: 20px solid rgb(82, 85, 255);
- 
 }
 
 .computer {
@@ -225,7 +224,6 @@ h2 {
 }
 
 .computer.random {
-
     background-color: white;
 }
 
@@ -333,4 +331,3 @@ p{
     }
 }
 
-/* box-shadow: 0 0 0 30px #1f3156, 0 0 0 64px #1f315680, 0 0 0 100px #1f315640; */

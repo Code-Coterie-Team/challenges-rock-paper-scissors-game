@@ -3,28 +3,31 @@ let btnRules = document.querySelector(".rules");
 let btnClose = document.getElementsByClassName("close")[0];
 
 let handshape = document.querySelectorAll(".handshape");
-
 let gameGridContainer = document.querySelector(".gameGridContainer")
 let resultContainer = document.querySelector(".resultOfGame");
+
 const you = document.querySelector(".you");
 
 const footer = document.querySelector(".footer");
-const youImg = document.querySelector(".you img");
 
+const youImg = document.querySelector(".you img");
 let showSelectYou = document.querySelector(".showSelectYou");
 let theHousePicked = document.querySelector(".theHousePicked");
 
 const computer = document.getElementById("computer");
-const choice = ["rock", "paper", "scissors"];
-let computerChoice = "";
 
 const btnPlayAgain = document.querySelector(".playAgain");
+
 const resultPart = document.querySelector(".result");
-let getAlt = "";
+
 const announcingResult = document.querySelector(".announcingResult");
 const scoreNumber = document.querySelector(".scorenumber");
-let score = 0;
+
+const choice = ["rock", "paper", "scissors"];
+let computerChoice = "";
+let getAlt = "";
 let dataResult = "";
+let score = 0;
 
 //modalOpen
 btnRules.addEventListener("click", () => {
@@ -34,18 +37,14 @@ btnRules.addEventListener("click", () => {
 });
 //modalClose
 btnClose.addEventListener("click", () => {
-
     modal.style.animationName = "moveModalClose";
     modal.style.animationDuration = "1s";
     setTimeout(() => {
         modal.style.display = "none";
     }, 500);
-
-
 });
 
 handshape.forEach(handShape => {
-
     handShape.addEventListener("click", (e) => {
         computerChoice = choice[Math.floor(Math.random() * choice.length)];
         // console.log(computerChoice);
@@ -112,7 +111,6 @@ function housePicked(computerChoiceData) {
                 computer.classList.add("animate");
                 console.log("boxShadow now : " + computer.style.boxShadow);
                 if (dataResult == "youLost") {
-                    // console.log("if lost add boxshadow :"+ computer.style.boxShadow);
                     computer.style.boxShadow += ", 0 0 0 70px #1f3156, 0 0 0 130px #1f315680, 0 0 0 200px #1f315640";
                     computer.style.transition ="box-shadow 2s";
                 }
@@ -127,7 +125,6 @@ function housePicked(computerChoiceData) {
                 computer.classList.add("animate");
                 console.log("boxShadow now : " + computer.style.boxShadow);
                 if (dataResult == "youLost") {
-                    // console.log("if lost add boxshadow :"+ computer.style.boxShadow);
                     computer.style.boxShadow += ", 0 0 0 70px #1f3156, 0 0 0 130px #1f315680, 0 0 0 200px #1f315640";
                     computer.style.transition ="box-shadow 2s";
                 }
@@ -144,15 +141,11 @@ function housePicked(computerChoiceData) {
                 computer.classList.add("animate");
                 console.log("boxShadow now : " + computer.style.boxShadow);
                 if (dataResult == "youLost") {
-                    // console.log("if lost add boxshadow :"+ computer.style.boxShadow);
                     computer.style.boxShadow += ", 0 0 0 70px #1f3156, 0 0 0 130px #1f315680, 0 0 0 200px #1f315640";
                     computer.style.transition ="box-shadow 2s";
-                    
                 }
             }, 1000);
-
             break;
-
     }
 
 }
@@ -189,9 +182,7 @@ function determinTheWinner() {
         return "youLost";
     }
 }
-function styleLoseGame() {
-    console.log("if lost add boxshadow :" + computer.style.boxShadow);
-}
+
 
 
 
