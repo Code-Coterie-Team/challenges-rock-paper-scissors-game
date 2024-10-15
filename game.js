@@ -109,7 +109,7 @@ function housePicked(computerChoiceData) {
                 computer.style.border = "40px solid rgb(233, 45, 76)";
                 computer.style.boxShadow = "0 10px #a90f2b, inset 0 10px #cad5d6";
                 computer.classList.add("animate");
-                console.log("boxShadow now : " + computer.style.boxShadow);
+                // console.log("boxShadow now : " + computer.style.boxShadow);
                 if (dataResult == "youLost") {
                     computer.style.boxShadow += ", 0 0 0 70px #1f3156, 0 0 0 130px #1f315680, 0 0 0 200px #1f315640";
                     computer.style.transition ="box-shadow 2s";
@@ -123,7 +123,7 @@ function housePicked(computerChoiceData) {
                 computer.style.border = "40px solid rgb(82, 85, 255)";
                 computer.style.boxShadow = "0 10px #180d92, inset 0 10px #cad5d6";
                 computer.classList.add("animate");
-                console.log("boxShadow now : " + computer.style.boxShadow);
+                // console.log("boxShadow now : " + computer.style.boxShadow);
                 if (dataResult == "youLost") {
                     computer.style.boxShadow += ", 0 0 0 70px #1f3156, 0 0 0 130px #1f315680, 0 0 0 200px #1f315640";
                     computer.style.transition ="box-shadow 2s";
@@ -139,7 +139,7 @@ function housePicked(computerChoiceData) {
                 computer.style.border = " 40px solid rgb(233, 202, 45)";
                 computer.style.boxShadow = " 0 10px #a9920f, inset 0 10px #cad5d6";
                 computer.classList.add("animate");
-                console.log("boxShadow now : " + computer.style.boxShadow);
+                // console.log("boxShadow now : " + computer.style.boxShadow);
                 if (dataResult == "youLost") {
                     computer.style.boxShadow += ", 0 0 0 70px #1f3156, 0 0 0 130px #1f315680, 0 0 0 200px #1f315640";
                     computer.style.transition ="box-shadow 2s";
