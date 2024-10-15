@@ -209,7 +209,7 @@ h2 {
     height: 286px;
     border-radius: 50%;
     border: 20px solid rgb(82, 85, 255);
-    box-shadow: 0 10px #180d92, inset 0 10px #cad5d6;
+ 
 }
 
 .computer {
@@ -259,6 +259,7 @@ h2 {
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    z-index: 10;
 }
 
 .result p {
@@ -283,7 +284,9 @@ h2 {
 .playAgain:hover {
     color: #dd405d;
 }
-
+p{
+    z-index: 10;
+}
 @keyframes moveModalOpen {
     from {
         top: 0;
@@ -329,3 +332,5 @@ h2 {
         opacity: 1;
     }
 }
+
+/* box-shadow: 0 0 0 30px #1f3156, 0 0 0 64px #1f315680, 0 0 0 100px #1f315640; */
